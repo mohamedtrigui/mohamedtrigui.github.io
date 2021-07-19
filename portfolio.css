@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
+:root {
+  font-size: 10px;
+  font-family: "Ubuntu", sans-serif;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9fbfc;
+  font-size: 1.6rem;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f9fbfc;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem 15rem;
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+  height: auto;
+  min-height: 10vh;
+  width: 100%;
+  z-index: 99;
+}
+
+header a {
+  color: #333333;
+  text-decoration: none;
+}
+
+header span {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+nav {
+  width: max-content;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a {
+  font-size: 2rem;
+  padding: 1rem;
+  transition: all 0.2s ease-in-out;
+  margin: 1rem;
+}
+
+nav a:hover {
+  font-weight: 500;
+  border-bottom: 2px solid #333333;
+}
+
+#menu {
+  display: none;
+}
+
+#menu:checked~header>nav {
+  display: block;
+}
+
+#menu:checked~header>nav>a {
+  display: block;
+  width: 100%;
+}
+
+#menu:checked~header>nav>a:hover {
+  border-width: 0.2rem 0;
+  border-style: solid none;
+  padding-top: 0.8rem 0;
+}
+
+#menu-lbl {
+  display: none;
+  width: 3rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  border-radius: 0.4rem;
+  transition: all 0.2s ease-in-out;
+}
+
+#menu-lbl:hover {
+  transform: scale(1.05);
+}
+
+#menu-lbl:active {
+  transform: scale(1.06);
+  transform: scale(1);
+}
+
+#menu-lbl img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.bright {
+  background-color: #f9fbfc;
+  color: #333333;
+}
+
+.dark {
+  background-color: #333333;
+  color: #f9fbfc;
+}
+
+#welcome-section {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column wrap;
+  background: url("https://img.freepik.com/vecteurs-libre/fond-blanc-elegant-lignes-brillantes_1017-17580.jpg?size=626&ext=jpg") no-repeat;
+  background-size: 100% 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.eye-grabber {
+  height: max-content;
+}
+
+.eye-grabber h2,
+.eye-grabber h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.eye-grabber h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  color: #333333;
+  font-weight: 500;
+}
+.eye-grabber h2 {
+  font-size: 2rem;
+  color: #666666;
+  font-weight: 400;
+}
+
+.myname {
+  color: #0984e3;
+}
+
+section {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  display: flex;
+  padding: 10rem 15rem;
+  position: relative;
+  flex-flow: column wrap;
+}
+
+.about {
+  font-size: 3.5rem;
+  background-color: #2d3436;
+  color:#b2bec3;
+}
+
+.about p{
+  color: white;
+  font-size: 2.5rem;
+}
+
+.skills {
+  font-size: 3.5rem;
+  color:black;
+}
+
+.skills p{
+  color: #666666;
+  font-size: 2.5rem;
+}
+
+
+.icon-tiles-container {
+  border-radius: 35px;
+  border-style: solid;
+   border-color: #666666;
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icon-tile {
+  height: 15rem;
+  padding: 2rem 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon-tile:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.icon-tile img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+
+/********projects****************************/
+
+.projects {
+  font-size: 3.5rem;
+  background-color: #2d3436;
+  color:#b2bec3;
+}
+
+.projects p{
+  color: white;
+  font-size: 2rem;
+  width: 250px;
+  text-align: center;
+}
+
+.portfolio {
+  border-radius: 35px;
+  border-style: solid;
+   border-color:  #2d3436;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.project1 {
+  height: 21rem;
+  padding: 2rem 0rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.project1:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.project1 img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+
+
+
+/*footer:contact ************************/
+.contact {
+  display: flex;
+  background-color: #1e272e;
+  width: 100%;
+  height: 170px;
+  color: white;
+  font-size: 1.1em;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer1,
+.footer2 {
+  display: flex;
+  flex-direction: column;
+  height: 130px;
+}
+
+.contactsDetails,
+.reseauxDetails {
+  padding-top: 15px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+i {
+  margin: 5px;
+}
+
+
+
+@media (min-width: 800px) {
+  .my-skills ul {
+    display: flex;
+  }
+  .my-skills {
+    height: 25rem;
+    text-align: center;
+  }
+  .skills {
+    display: flex;
+    justify-content: center;
+  }
+}
