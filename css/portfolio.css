@@ -11,6 +11,7 @@
 }
 
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
   background-color: #f9fbfc;
@@ -63,20 +64,20 @@ nav a:hover {
   border-bottom: 2px solid #333333;
 }
 
-#menu {
+/* #menu {
   display: none;
 }
 
-#menu:checked~header>nav {
+#menu:checked ~ header > nav {
   display: block;
 }
 
-#menu:checked~header>nav>a {
+#menu:checked ~ header > nav > a {
   display: block;
   width: 100%;
 }
 
-#menu:checked~header>nav>a:hover {
+#menu:checked ~ header > nav > a:hover {
   border-width: 0.2rem 0;
   border-style: solid none;
   padding-top: 0.8rem 0;
@@ -104,7 +105,7 @@ nav a:hover {
   width: auto;
   max-width: 100%;
   height: auto;
-}
+} */
 
 .bright {
   background-color: #f9fbfc;
@@ -169,29 +170,28 @@ section {
 .about {
   font-size: 3.5rem;
   background-color: #2d3436;
-  color:#b2bec3;
+  color: #b2bec3;
 }
 
-.about p{
+.about p {
   color: white;
   font-size: 2.5rem;
 }
 
 .skills {
   font-size: 3.5rem;
-  color:black;
+  color: black;
 }
 
-.skills p{
+.skills p {
   color: #666666;
   font-size: 2.5rem;
 }
 
-
 .icon-tiles-container {
   border-radius: 35px;
   border-style: solid;
-   border-color: #666666;
+  border-color: #666666;
   background-color: white;
   display: flex;
   flex-flow: row wrap;
@@ -217,16 +217,16 @@ section {
   max-height: 100%;
 }
 
-
 /********projects****************************/
 
 .projects {
   font-size: 3.5rem;
   background-color: #2d3436;
-  color:#b2bec3;
+  color: #839aa3;
 }
 
-.projects p{
+/*to all p elements in the project section*/
+.projects p {
   color: white;
   font-size: 2rem;
   width: 250px;
@@ -234,35 +234,50 @@ section {
 }
 
 .portfolio {
-  border-radius: 35px;
-  border-style: solid;
-   border-color:  #2d3436;
+  border-radius: 0px;
+  border-style: none;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
-.project1 {
-  height: 21rem;
-  padding: 2rem 0rem;
+.portfolio__item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.portfolio__text {
+  height: 50vh;
+  width: 45%;
+}
+.portfolio__text p {
+  width: 100%;
+  text-align: justify;
+}
+p.project__title {
+  font-size: 2.5rem;
+  color: #0984e3;
+}
+
+.portfolio__img {
+  width: 40%;
+  height: 50vh;
   transition: all 0.2s ease-in-out;
 }
 
-.project1:hover {
+.portfolio__img:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
 
-.project1 img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 100%;
+.portfolio__img img {
+  padding-top: 40px;
+  width: 100%;
 }
-
-
-
 
 /*footer:contact ************************/
 .contact {
@@ -294,11 +309,40 @@ a {
   cursor: pointer;
 }
 
+.profile-link:hover {
+  border-bottom: 2px solid white;
+}
+
 i {
   margin: 5px;
 }
 
+@media (max-width: 400px) {
+  header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f9fbfc;
+    /* flex-flow: row wrap; */
 
+    /* justify-content: flex-end; */
+    align-items: center;
+    padding: 2rem 15rem;
+    margin: 0;
+    transition: all 0.2s ease-in-out;
+    height: auto;
+    /* min-height: 10vh; */
+    width: 50%;
+    z-index: 99;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    transition: all 0.2s ease-in-out;
+  }
+}
 
 @media (min-width: 800px) {
   .my-skills ul {
