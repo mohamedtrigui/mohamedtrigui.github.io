@@ -64,6 +64,10 @@ nav a:hover {
   border-bottom: 2px solid #333333;
 }
 
+.hamburger {
+  display: none;
+}
+
 /* #menu {
   display: none;
 }
@@ -318,29 +322,69 @@ i {
 }
 
 @media (max-width: 400px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    width: max-content;
+    transition: all 0.2s ease-in-out;
+  }
+
   header {
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     background-color: #f9fbfc;
-    /* flex-flow: row wrap; */
 
-    /* justify-content: flex-end; */
     align-items: center;
-    padding: 2rem 15rem;
     margin: 0;
     transition: all 0.2s ease-in-out;
     height: auto;
     /* min-height: 10vh; */
-    width: 50%;
+    width: 100vw;
     z-index: 99;
   }
-  nav {
+
+  section {
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    padding: 3rem 3rem;
+    /* flex-flow: column wrap; */
+  }
+
+  .portfolio__item {
+    flex-direction: column;
+  }
+
+  .portfolio__text {
+    height: auto;
+    width: 100%;
+  }
+
+  .portfolio__img {
+    width: 100%;
+  }
+
+  /*footer:contact ************************/
+  .contact {
     display: flex;
     flex-direction: column;
-    width: max-content;
-    transition: all 0.2s ease-in-out;
+    width: 100%;
+    height: auto;
+  }
+
+  .footer1,
+  .footer2 {
+    margin: 2rem;
+    flex-direction: column;
+    height: auto;
   }
 }
 

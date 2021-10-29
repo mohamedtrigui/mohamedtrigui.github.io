@@ -10,19 +10,25 @@
     <link rel="stylesheet" href="css/portfolio.css" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+    <script defer src="js/portfolio.js"></script>
   </head>
 
+  
+ 
   <header id="navbar">
-    <!-- <label for="menu" onclick id="menu-lbl"
-      ><img src="https://i.ibb.co/FK3zKyW/menu.png" alt=""
-    /></label> -->
-    <nav>
+    <a href="javascript:void(0);" class="hamburger" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="myLinks">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
+     <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  
   </header>
+  
   <section id="welcome-section" class="bright">
     <div class="eye-grabber">
       <h1>Hi, I am <span class="myname">Mohamed</span></h1>
@@ -48,7 +54,7 @@
       to see my Resume).
     </p>
     <p>I decided to change the situation by embrassing the world of IT. Because I do love IT and especially Coding.</p>
-    <p>I recently start working with Web Technology and everyday, I am learning new things and improving on what i already know.</p>
+    <p>I recently start working with Web Technology and everyday, I am learning new things and improving on what I already know.</p>
   </section>
   <section id="skills" class="skills">
     <h2>Skills & Technologies</h2>
@@ -67,17 +73,34 @@
         <img src="assets/images/angular-logo.png" title="Angular" alt="Angular logo" />
       </div>
       <div class="icon-tile">
+        <img src="assets/images/react.png" title="React" alt="React logo" />
+      </div>
+      <div class="icon-tile">
+        <img src="assets/images/nodejs.png" title="Node" alt="Nodejs logo" />
+      </div>
+      <div class="icon-tile">
         <img src="assets/images/java-logo.png" title="Java" alt="Java logo" />
       </div>
-
+      <div class="icon-tile">
+        <img src="assets/images/spring.svg" title="Spring" alt="Spring logo" />
+      </div>
+      <div class="icon-tile">
+        <img src="assets/images/springboot.png" title="SpringBoot" alt="SpringBoot logo" />
+      </div>
       <div class="icon-tile">
         <img src="assets/images/php-logo.png" title="php" alt="php logo" />
+      </div>
+      <div class="icon-tile">
+        <img src="assets/images/laravel.png" title="Laravel" alt="laravel logo" />
       </div>
       <div class="icon-tile">
         <img src="assets/images/Git-logo.png" title="Git" alt="Git logo" />
       </div>
       <div class="icon-tile">
         <img src="assets/images/github-logo.png" title="GitHub" alt="GitHub logo" />
+      </div>
+      <div class="icon-tile">
+        <img src="assets/images/docker.png" title="Docker" alt="Docker logo" />
       </div>
     </div>
   </section>
@@ -117,7 +140,7 @@
         </div>
 
         <div class="portfolio__img">
-          <a href="https://codepen.io/mohamed-trigui-the-looper/pen/GRjeMRd" target="_blank">
+          <a href="" target="_blank">
             <img src="assets/images/bankApp.bmp" alt="" />
           </a>
         </div>
@@ -136,84 +159,47 @@
       />
       <div class="portfolio__item">
         <div class="portfolio__text">
-          <p class="project__title">traveltodo: Survey Form</p>
+          <p class="project__title">shopping.tn: E-Commerce Platform</p>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, laudantium sed alias aperiam eos iste dolorem nesciunt animi
-            pariatur adipisci tempore vero assumenda in doloribus officia voluptas libero sit nam illum fugiat debitis commodi ipsam omnis
-            porro. Veritatis dolorem nesciunt harum dolore, asperiores illo reprehenderit eligendi cupiditate, tenetur accusantium aut!
+            shopping.tn is a web E-Commerce application where the client can browse through products and place order, the Admin can access and manage the users and products details.
           </p>
-          <p class="project-footer">Click here to go to traveltodo: Survey Form</p>
+          <p>It's a Full Stack application with Angular front-end and Nodejs back-end using REST APIs and MongoDB database.</p>
+          <p class="project-footer">
+            <a
+              style="text-decoration: underline"
+              onMouseOver="this.style.color='#b2bec3'"
+              onMouseOut="this.style.color='#FFFFFF'"
+              href="https://github.com/mohamedtrigui/"
+              target="_blank"
+              >Click here</a
+            >
+            to see the front-end source code with Angular.
+          </p>
+          <p class="project-footer">
+            <a
+              style="text-decoration: underline"
+              onMouseOver="this.style.color='#b2bec3'"
+              onMouseOut="this.style.color='#FFFFFF'"
+              href="https://github.com/mohamedtrigui/"
+              target="_blank"
+              >Click here</a
+            >
+            to see the back-end source code with Nodejs.
+          </p>
         </div>
 
         <div class="portfolio__img">
           <a href="https://codepen.io/mohamed-trigui-the-looper/pen/WNGBmqx" target="_blank">
-            <img src="https://designingforuncertainty.com/wp-content/uploads/2020/07/maxresdefault-80.jpg" alt="" />
+            <img src="assets/images/ecommerce.bmp" alt="" />
           </a>
         </div>
       </div>
 
       <!-- Portfolio item 03 -->
 
-      <hr
-        style="
-          width: 50%;
-          border-top: 1px solid #839aa3;
-          border-bottom: 1px solid #839aa3;
-          text-align: center;
-          margin-right: 0px;
-          margin-left: 0;
-          margin-bottom: 80px;
-        "
-      />
-      <div class="portfolio__item">
-        <div class="portfolio__text">
-          <p class="project__title">Trigui Montres: Product Landing Page</p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, laudantium sed alias aperiam eos iste dolorem nesciunt animi
-            pariatur adipisci tempore vero assumenda in doloribus officia voluptas libero sit nam illum fugiat debitis commodi ipsam omnis
-            porro. Veritatis dolorem nesciunt harum dolore, asperiores illo reprehenderit eligendi cupiditate, tenetur accusantium aut!
-          </p>
-          <p class="project-footer">Click here to go to Trigui Montres: Product Landing Page</p>
-        </div>
-
-        <div class="portfolio__img">
-          <a href="https://codepen.io/mohamed-trigui-the-looper/pen/LYbJwMG" target="_blank">
-            <img src="https://i.ytimg.com/vi/5mghFvaYSCo/maxresdefault.jpg" alt="" />
-          </a>
-        </div>
-      </div>
-
       <!-- Portfolio item 04 -->
 
-      <hr
-        style="
-          width: 50%;
-          border-top: 1px solid #839aa3;
-          border-bottom: 1px solid #839aa3;
-          text-align: center;
-          margin-right: 0px;
-          margin-left: 0;
-          margin-bottom: 80px;
-        "
-      />
-      <div class="portfolio__item">
-        <div class="portfolio__text">
-          <p class="project__title">Java Documentation Page</p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, laudantium sed alias aperiam eos iste dolorem nesciunt animi
-            pariatur adipisci tempore vero assumenda in doloribus officia voluptas libero sit nam illum fugiat debitis commodi ipsam omnis
-            porro. Veritatis dolorem nesciunt harum dolore, asperiores illo reprehenderit eligendi cupiditate, tenetur accusantium aut!
-          </p>
-          <p class="project-footer">Click here to go to Java Documentation Page</p>
-        </div>
-
-        <div class="portfolio__img">
-          <a href="https://codepen.io/mohamed-trigui-the-looper/pen/bGBQzbo" target="_blank">
-            <img src="https://i.ytimg.com/vi/a4sCUjPWf7k/maxresdefault.jpg" alt="" />
-          </a>
-        </div>
-      </div>
-    </div>
+ 
   </section>
 
   <footer id="contact" class="contact">
