@@ -66,6 +66,7 @@ nav a:hover {
 
 .hamburger {
   display: none;
+  color: 333333;
 }
 
 /* #menu {
@@ -128,6 +129,11 @@ nav a:hover {
   margin: 0;
   display: flex;
   flex-flow: column wrap;
+  background-color: #ffffff;
+  background-color: #9dc5c3;
+  background-color: #b8c6db;
+  background-color: #f9fcff;
+
   background: url("https://img.freepik.com/vecteurs-libre/fond-blanc-elegant-lignes-brillantes_1017-17580.jpg?size=626&ext=jpg") no-repeat;
   background-size: 100% 100%;
   align-items: center;
@@ -340,8 +346,9 @@ i {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #f9fbfc;
-
+    background-color: #f6f8fcde;
+    padding: 2rem 15rem;
+    min-height: 0;
     align-items: center;
     margin: 0;
     transition: all 0.2s ease-in-out;
