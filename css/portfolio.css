@@ -262,7 +262,8 @@ section {
 
 .portfolio__text {
   height: 50vh;
-  width: 45%;
+  width: 50%;
+  overflow: hidden;
 }
 .portfolio__text p {
   width: 100%;
@@ -274,9 +275,25 @@ p.project__title {
 }
 
 .portfolio__img {
+  padding-top: 3vh;
   width: 40%;
   height: 50vh;
   transition: all 0.2s ease-in-out;
+}
+
+.cf {
+  position: relative;
+  margin: 0 auto;
+}
+.cf img {
+  position: absolute;
+  left: 0;
+  -webkit-animation-name: fade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
 }
 
 .portfolio__img:hover {
@@ -287,6 +304,72 @@ p.project__title {
 .portfolio__img img {
   padding-top: 40px;
   width: 100%;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.cropapp2 {
+  -webkit-animation-delay: -4s;
+}
+.cropapp3 {
+  -webkit-animation-delay: -2s;
+}
+
+/********scroll****************************/
+/* width scrollbar*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track scrollbar*/
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle scrollbar*/
+::-webkit-scrollbar-thumb {
+  background: #888;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+
+/* Handle on hover scrollbar*/
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /*footer:contact ************************/
